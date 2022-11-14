@@ -1,0 +1,2 @@
+20221111	18:37:57	0fd9ccab-21ee-42bc-8227-5965d24f972c	Error: Not allowed by CORS
+20221111	18:40:39	c7d612a8-f55e-411b-83c4-b8b0a0da5ee4	Error: Not allowed by CORS
