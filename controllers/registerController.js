@@ -27,7 +27,7 @@ const handleNewUser = async (req, res) => {
 
     const result = await User.create({
       username: user,
-      // roles: { User: 2001, Editor: 1984 }, //if you don't provide roles by default it will take USER:2001 becuase we have mentioned it as default in User.js
+      roles: { User: 2001, Editor: 1984, Admin: 5150 }, //if you don't provide roles by default it will take USER:2001 becuase we have mentioned it as default in User.js
       password: hashpwd,
     });
     //from 34 to 39 that is the 2nd way to create & store the user register info
