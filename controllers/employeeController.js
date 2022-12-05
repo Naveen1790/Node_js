@@ -21,8 +21,8 @@ const createNewEmployee = async (req, res) => {
 
   try {
     const result = await Employee.create({
-      firstname: firstname,
-      lastname: lastname,
+      firstname: req.body.firstname,
+      lastname: req.body.lastname,
     });
 
     res.status(201).json(result);
@@ -67,8 +67,8 @@ const updateEmployee = async (req, res) => {
   if (!req.body?.id) {
     return res.status(400).json({ message: "Id parameter is required" });
   }
-  const employees = await Employee.findOne({ _id: req.body.id }).exec();
-  if (!employees)
+  const employee = await Employee.findOne({ _id: req.body.id }).exec();
+  if (!employee)
     return res
       .status(204)
       .json({ message: `No emplyee matches Id ${req.body.id}` });

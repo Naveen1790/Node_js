@@ -6,6 +6,7 @@ const connectDB = async () => {
       useUnifiedTopology: true,
       useNewUrlParser: true,
     });
+    console.log("connected to mongoDBsss");
   } catch (err) {
     console.error(err);
   }
